@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}Utilisation - Connection{% endblock %}
+
+{% block content %}
+        <div class="panel panel-default">
+            <div class="panel-body">
+               <center>
+                   <h2>S'inscire</h2>
+               </center>
+                <div class="col-xs-6">
+                    <form action="register" method="POST" class="form-group">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}"/>
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" id="username" name="username" class="form-control">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" class="form-control">
+                </div>
+                <div class="col-xs-6">
+                    <label for="email">Adresse mail :</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                    <label for="passwordV">Mot de passe (verification) :</label>
+                    <input type="password" id="passwordV" name="passwordV" class="form-control"><br>
+                    <input type="submit" style="float: right" class="btn btn-primary">
+                </div>
+                   </form>
+                </div>
+            </div>
+{% endblock %}

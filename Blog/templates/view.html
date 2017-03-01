@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Blog - {{article.titre}}{% endblock %}
+
+{% block content %}
+        <div class="panel panel-default">
+            <div class="panel-body">
+               <b>{{article.titre}}</b><br>
+               <small><i>Ecrit par {{article.auteur}}</i></small>
+               <p>{{article.contenu}}</p>
+            </div>
+        </div>
+{% endblock %}

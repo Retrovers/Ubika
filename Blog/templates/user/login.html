@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Utilisation - Connection{% endblock %}
+
+{% block content %}
+        <div class="panel panel-default">
+            <div class="panel-body">
+               <center>
+                   <h2>Se connecter</h2>
+               </center>
+                <div class="col-xs-6">
+                       <form action="login" method="POST" class="form-group">
+                       <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}"/>
+                       <label for="username">Nom d'utilisateur :</label>
+                       <input type="text" id="username" name="username" class="form-control">
+                       <label for="password">Mot de passe :</label>
+                       <input type="password" id="password" name="password" class="form-control">
+                       <input type="checkbox" id="remember">Se souvenir de moi ? (30 joours) <br>
+                       <input type="submit" class="btn btn-primary">
+                   </form>
+                </div>
+                <div class="col-xs-6">
+                    <div class="well">Entrez vos information pour vous conneter, et pour communiquer avec toute la communauté</div>
+                </div>  
+        </div>
+{% endblock %}

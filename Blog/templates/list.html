@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Blog - Listes{% endblock %}
+
+{% block content %}
+    {%for article in articles %}
+        <div class="panel panel-default">
+            <div class="panel-body">
+               <b>{{article.titre}}</b><br>
+               <small><i>Ecrit par {{article.auteur}} et publié le {{article.published_at}}</i></small>
+               <p>{{article.contenu|truncatewords_html:50}}</p>
+               <a style="float:right" href="{% url "blog_view" article.slug %}"><button class="btn btn-default">Lire la suite..</button></a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
